@@ -1,0 +1,1 @@
+export const leakByCall: (sink: Function, info: string) => void;

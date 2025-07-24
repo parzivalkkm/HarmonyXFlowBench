@@ -1,0 +1,1 @@
+export const setArray1: (a: string[], b: string) => void;

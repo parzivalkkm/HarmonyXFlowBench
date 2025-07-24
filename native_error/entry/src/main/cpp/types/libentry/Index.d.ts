@@ -1,0 +1,1 @@
+export const throwErrorWithTaint: (a: string) => void;

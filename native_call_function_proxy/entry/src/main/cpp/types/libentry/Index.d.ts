@@ -1,0 +1,1 @@
+export const proxy_by_call:(func: Function, info: string) => string;

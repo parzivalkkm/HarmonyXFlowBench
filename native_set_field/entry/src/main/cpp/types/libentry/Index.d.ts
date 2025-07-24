@@ -1,0 +1,1 @@
+export const setNamedProperty: (obj: Object, name: string, value: string) => void;

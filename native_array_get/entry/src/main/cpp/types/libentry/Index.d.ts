@@ -1,0 +1,1 @@
+export const leakArray0: (a: string[]) => void;

@@ -1,0 +1,1 @@
+export const contractPhiTest:(str1: string,str2: string)=>  string;
