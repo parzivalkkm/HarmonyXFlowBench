@@ -1,0 +1,80 @@
+{
+    "hap_name": "@TEST_HAP_NAME",
+    "so_name": "libdynamic.so",
+    "module_name": "dynamic",
+    "functions": [
+        {
+            "name": "leak",
+            "params": {
+                "%a1": "napi_env",
+                "%a2": "napi_callback_info"
+            },
+            "instructions": [
+                {
+                    "callsite": "1055628",
+                    "target": "napi_get_cb_info",
+                    "operands": [
+                        "%a1",
+                        "%a2",
+                        "top",
+                        "top",
+                        "top",
+                        "top"
+                    ],
+                    "rets": {
+                        "%0": "-1",
+                        "%1": "3"
+                    },
+                    "type": "Call"
+                },
+                {
+                    "callsite": "1055636",
+                    "target": "operator.new[]",
+                    "operands": [
+                        "long 256"
+                    ],
+                    "rets": {
+                        "%2": "-1"
+                    },
+                    "type": "Call"
+                },
+                {
+                    "callsite": "1055664",
+                    "target": "napi_get_value_string_utf8",
+                    "operands": [
+                        "%a1",
+                        "%1",
+                        "%2",
+                        "long -1",
+                        "top"
+                    ],
+                    "rets": {
+                        "%3": "-1",
+                        "%4": "4"
+                    },
+                    "type": "Call"
+                },
+                {
+                    "callsite": "1055696",
+                    "target": "OH_LOG_Print",
+                    "operands": [
+                        "long 0",
+                        "long 4",
+                        "long 0",
+                        "null",
+                        "char* \"Leak LastLocation (libdynamic.so) %{public}s\"",
+                        "%2"
+                    ],
+                    "rets": {
+                        "%5": "-1"
+                    },
+                    "type": "Call"
+                },
+                {
+                    "operand": "%1",
+                    "type": "Ret"
+                }
+            ]
+        }
+    ]
+}
